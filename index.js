@@ -22,7 +22,7 @@ var server = app.listen(process.env.PORT || 8080, function() {
 /**************************************/
 bot.on('message', function(event) {
   if (event.message.type = 'text') {
-    var msg = event.message.text;
+    var msg = '"'+event.message.text+'" is not a valid instruction';
     event.reply(msg).then(function(data) {
       // success 
       console.log(msg);
