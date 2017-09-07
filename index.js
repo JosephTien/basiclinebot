@@ -6,9 +6,9 @@ var debug = false;
 var linebot = require('linebot');
 var express = require('express');
 var bot = linebot({
-  channelId: '1534193517',
-  channelSecret: '396ce85776aac89c96ef32bf7de7ff57',
-  channelAccessToken: '/i8orRNkILi4hQ4CzOqVzz4n6zva2hY3q+Z8viH+afCsVS/RkxMC733FW71NCa6Mf8Tteaqznt4EpzdxUtyI5jBg8B2haNaw6cCw5unWwQ3vSv8rifx+A+o0pnpBE94zyoG4l0pzxApivOz85iShFAdB04t89/1O/w1cDnyilFU='
+  channelId: '1534208524',
+  channelSecret: '97750d767488ced3eb09a1b0c7b8e692',
+  channelAccessToken: 'H5laQFbXOW3zqOChoZgVc+esH4GIfCLvjEibiON+KGG/F0tPD/U4L8+f83KTcbeTE4gDejbWBgPtScaj2hciMwgrv1Vxo/x5MJTNLWFubaI38thKYmuAe7mDn2ypuar0LPZBoWgnoxrkiKHoP4Wv5AdB04t89/1O/w1cDnyilFU='
 });
 //執行Bot
 mybot();
