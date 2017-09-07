@@ -37,13 +37,12 @@ function mybot(){
   });
 }
 function inst(event){
-
   var str = event.message.text;
   var strs = str.split(' ');
   try {
     if(strs[0].toLowerCase()==="timer"){
       setTimeout(function(){
-        event.reply(strs[2])
+        bot.push(event.source.userId ,strs[2]);
       },parseInt(strs[1])*1000);
       return "done!";
     }else{
