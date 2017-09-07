@@ -41,9 +41,16 @@ function inst(event){
   var strs = str.split(' ');
   try {
     if(strs[0].toLowerCase()==="timer"){
+      var left = "";
+      for(var i=2;i<strs.length;i++){
+        left = left + " " + strs[i];
+      }
+      /**/
+      //setMsgTimer(event.source.userId, parseInt(strs[1]), left)
       setTimeout(function(){
-        bot.push(event.source.userId ,strs[2]);
+        repeatMsg(event.source.userId, left, 10, 1)
       },parseInt(strs[1])*1000);
+      /**/
       return "done!";
     }else{
       return '"'+str+'" is not a valid instruction...';
@@ -51,4 +58,17 @@ function inst(event){
   }catch(err){
     return '"'+str+'" is not a valid instruction...';
   }
+}
+
+function setMsgTimer(userId, sec, msg){
+  setTimeout(function(){
+    bot.push(userId,msg);
+  },sec*1000);
+}
+function repeatMsg(userId, msg, times, interval){
+  if(times<=0)return;
+  bot.push(userId,msg);
+  setTimeout(function(){
+    repeatMsg(userId, msg, times-1, interval)
+  },interval*1000);
 }
